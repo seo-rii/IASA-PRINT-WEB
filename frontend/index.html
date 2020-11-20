@@ -1,0 +1,69 @@
+<!Doctype html>
+<html>
+<head>
+    <link href="./css/main.css" rel="stylesheet">
+    <link href="https://unpkg.com/material-components-web@3.2.0/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@3.2.0/dist/material-components-web.min.js"></script>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <script src="js/snow.js"></script>
+    <script src="js/main.js"></script>
+    <title>Print - IASA Portal</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div id="back"></div>
+<canvas id="canvas"></canvas>
+<main>
+    <div id="container">
+        <div id="left">
+            <div>
+                <h2>인천과학예술영재학교</h2>
+                <p id="msg">프린트 파일 업로드</p>
+                <br>
+                <div style="font-size: 60%;">
+                    <p>2020 <a href="//github.com/Seo-Rii">Studio SEORII®</a>. All right Reserved.</p>
+                    <p>Powered by Club NULL;</p>
+                </div>
+            </div>
+        </div>
+        <div id="right" onclick="selectFile()">
+            <p>여기에 파일을 드래그하거나 클릭해서 파일을 선택하세요.</p>
+        </div>
+    </div>
+</main>
+<div class="mdc-dialog">
+    <div class="mdc-dialog__container">
+        <div aria-describedby="my-dialog-content"
+             aria-labelledby="my-dialog-title"
+             aria-modal="true"
+             class="mdc-dialog__surface"
+             role="alertdialog">
+            <div class="mdc-dialog__content" id="my-dialog-content">
+                <br>
+                <h3>프린터에서 아래 코드를 입력하세요.</h3>
+                <h1 id="code"></h1>
+                <p>이 코드는 10분 동안 유효합니다.</p>
+            </div>
+            <div class="mdc-dialog__actions">
+                <button class="mdc-button mdc-dialog__button" data-mdc-dialog-action="cancel" type="button">
+                    <div class="mdc-button__ripple"></div>
+                    <span class="mdc-button__label">닫기</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="mdc-dialog__scrim"></div>
+</div>
+<div class="mdc-snackbar">
+    <div aria-relevant="additions" class="mdc-snackbar__surface" role="status">
+        <div aria-atomic="false" class="mdc-snackbar__label" id="snackbar-text"></div>
+        <div aria-atomic="true" class="mdc-snackbar__actions">
+            <button class="mdc-button mdc-snackbar__action" type="button">
+                <div class="mdc-button__ripple"></div>
+                <span class="mdc-button__label" style="color: #b56c45 !important;">닫기</span>
+            </button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

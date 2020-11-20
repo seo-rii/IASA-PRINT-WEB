@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IASA 프린트 - 관리</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Splash-->
+    <script>var timerStart = Date.now();</script>
+    <style>
+        .fade {
+            transition: opacity .5s ease;
+        }
+
+        #splashSvg {
+            max-width: 60vw;
+            height: auto;
+            transform: translate(calc(50vw - 50%), calc(50vh - 50%));
+            background: initial;
+        }
+
+        #logo-flag {
+            opacity: 0;
+            animation: logo-obj-anim .5s ease forwards;
+            animation-delay: .2s;
+        }
+
+        #logo-school {
+            opacity: 0;
+            animation: logo-obj-anim .5s ease forwards;
+            animation-delay: .5s;
+        }
+
+        @keyframes logo-obj-anim {
+            from {
+                opacity: 0;
+                transform: translate(-25px, -25px);
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        #logo-l1 {
+            stroke-dasharray: 160.4;
+            stroke-dashoffset: 160.4;
+            animation: logo-dash-1 .1s linear forwards;
+            animation-delay: .1s;
+            opacity: 0;
+        }
+
+        @keyframes logo-dash-1 {
+            from {
+                opacity: 1;
+            }
+            to {
+                stroke-dashoffset: 0;
+                opacity: 1;
+            }
+        }
+
+        #logo-l2 {
+            stroke-dasharray: 239.1;
+            stroke-dashoffset: 239.1;
+            animation: logo-dash-2 .2s ease forwards;
+            animation-delay: 0s;
+            opacity: 0;
+        }
+
+        @keyframes logo-dash-2 {
+            from {
+                opacity: 1;
+            }
+            to {
+                stroke-dashoffset: 0;
+                opacity: 1;
+            }
+        }
+
+        #logo-l3 {
+            stroke-dasharray: 447.8;
+            stroke-dashoffset: 447.8;
+            animation: logo-dash-3 .2s linear forwards;
+            animation-delay: .2s;
+            opacity: 0;
+        }
+
+        @keyframes logo-dash-3 {
+            from {
+                opacity: 1;
+            }
+            to {
+                stroke-dashoffset: 0;
+                opacity: 1;
+            }
+        }
+
+        #logo-l4 {
+            stroke-dasharray: 421.1;
+            stroke-dashoffset: 421.1;
+            animation: logo-dash-4 .5s ease forwards;
+            animation-delay: .4s;
+            opacity: 0;
+        }
+
+        @keyframes logo-dash-4 {
+            from {
+                opacity: 1;
+            }
+            to {
+                stroke-dashoffset: 0;
+                opacity: 1;
+            }
+        }
+
+        #logo-l5 {
+            stroke-dasharray: 418.1;
+            stroke-dashoffset: 418.1;
+            animation: logo-dash-5 .5s ease forwards;
+            animation-delay: .3s;
+            opacity: 0;
+        }
+
+        @keyframes logo-dash-5 {
+            from {
+                opacity: 1;
+            }
+            to {
+                stroke-dashoffset: 0;
+                opacity: 1;
+            }
+        }
+
+        #logo-l6 {
+            stroke-dasharray: 418.1;
+            stroke-dashoffset: 418.1;
+            animation: logo-dash-6 .5s ease forwards;
+            animation-delay: .5s;
+            opacity: 0;
+        }
+
+        @keyframes logo-dash-6 {
+            from {
+                opacity: 1;
+            }
+            to {
+                stroke-dashoffset: 0;
+                opacity: 1;
+            }
+        }
+
+    </style>
+    <div class="fade"
+         id="preloader"
+         style="z-index:5000;height:100vh;width:100vw;margin:0;padding:0;position: fixed;background:#ffffff;opacity:1;top:0;left:0;cursor:wait;">
+        <svg height="489" id="splashSvg" viewBox="0 0 504 489" width="504" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(-22 -115)">
+                <path d="M120 154l135 78.5L120 311z" fill="#FFFF2D" fill-rule="evenodd" id="logo-flag"/>
+                <path d="M127 365h389v233H127z" fill="#5351DB" id="logo-school" opacity="0"/>
+                <path d="M237.462 202.729 98.5001 122.5 " fill="none" fill-rule="evenodd" id="logo-l1"
+                      stroke="#404040" stroke-linecap="round" stroke-miterlimit="8" stroke-width="13.3333"/>
+                <path d="M0 0 207.128 119.585" fill="none" fill-rule="evenodd" id="logo-l2"
+                      stroke="#404040" stroke-linecap="round" stroke-miterlimit="8" stroke-width="13.3333"
+                      transform="matrix(1 0 0 -1 30.5001 323.085)"/>
+                <path d="M97.5001 122.5 97.5002 570.347" fill="none" fill-rule="evenodd" id="logo-l3"
+                      stroke="#404040" stroke-linecap="round" stroke-miterlimit="8" stroke-width="13.3333"/>
+                <path d="M97.5001 570.5 518.665 570.5" fill="none" fill-rule="evenodd" id="logo-l4"
+                      stroke="#404040" stroke-linecap="round" stroke-miterlimit="8" stroke-width="13.3333"/>
+                <path d="M0 0 0.000104987 256.624" fill="none" fill-rule="evenodd" id="logo-l5"
+                      stroke="#404040" stroke-linecap="round" stroke-miterlimit="8" stroke-width="13.3333"
+                      transform="matrix(1 0 0 -1 487.5 597.124)"/>
+                <path d="M0 0 418.119 0.000104987" fill="none" fill-rule="evenodd" id="logo-l6"
+                      stroke="#404040" stroke-linecap="round" stroke-miterlimit="8"
+                      stroke-width="13.3333" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 486.619 339.5)"/>
+            </g>
+        </svg>
+    </div>
+    <!--Splash-->
+    <script src="/res/mdc-3.2.0.min.js"></script>
+    <link href="/res/mdc-3.2.0.min.css" rel="stylesheet">
+    <script src="/res/common/common.js"></script>
+    <link href="/res/common/common.css" rel="stylesheet">
+    <link href="/pageCss/terms.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="../js/admin.js"></script>
+</head>
+<body>
+<header class="mdc-top-app-bar app-bar mdc-top-app-bar--fixed" id="app-bar" style="z-index: 100;">
+    <div class="mdc-linear-progress fade" id="iProg"
+         role="progressbar" style="width:100%;z-index:1000;--mdc-theme-primary:#8cc4de;">
+        <div class="mdc-linear-progress__buffering-dots"></div>
+        <div class="mdc-linear-progress__buffer" style="background-color: #5351db;"></div>
+        <div class="mdc-linear-progress__bar mdc-linear-progress__primary-bar">
+            <span class="mdc-linear-progress__bar-inner"></span>
+        </div>
+        <div class="mdc-linear-progress__bar mdc-linear-progress__secondary-bar">
+            <span class="mdc-linear-progress__bar-inner"></span>
+        </div>
+    </div>
+    <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <a class="demo-menu material-icons mdc-top-app-bar__navigation-icon" style="cursor: pointer;">menu</a>
+            <span class="mdc-top-app-bar__title"><a href="/">IASA Portal</a></span>
+        </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+            <div class="mdc-menu-surface--anchor">
+                <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded" id="accountInfo"
+                        onclick="mdcInstance.accountmenu.open=true;">
+                    account_circle
+                </button>
+                <div class="mdc-menu mdc-menu-surface" id="accountMenu">
+                    <ul aria-hidden="true" aria-orientation="vertical" class="mdc-list" role="menu" tabindex="-1">
+                        <li id="loginMenu_info" role="menuitem">
+                            <h4 id="userId" style="margin:10px;"></h4>
+                        </li>
+                        <li class="mdc-list-item mdc-ripple" id="loginMenu_login" onclick="logIn();"
+                            role="menuitem">
+                            <span class="mdc-list-item__text">로그인</span>
+                        </li>
+                        <li class="mdc-list-item mdc-ripple" id="loginMenu_logout" onclick="logOut();" role="menuitem">
+                            <span class="mdc-list-item__text">로그아웃</span>
+                        </li>
+                        <li class="mdc-list-item mdc-ripple" id="loginMenu_mypage" onclick="location.href='/mypage'"
+                            role="menuitem">
+                            <span class="mdc-list-item__text">마이페이지</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</header>
+<aside class="mdc-drawer mdc-top-app-bar--fixed-adjust">
+    <div class="mdc-drawer__content">
+        <nav class="mdc-list">
+            <a class="mdc-list-item mdc-ripple" onclick="scrollToCont('index');">
+                <span class="mdc-list-item__text">약관</span>
+            </a>
+            <a class="mdc-list-item mdc-ripple" onclick="scrollToCont('welcome');">
+                <span class="mdc-list-item__text">인삿말</span>
+            </a>
+            <a class="mdc-list-item mdc-ripple" onclick="scrollToCont('services');">
+                <span class="mdc-list-item__text">서비스</span>
+            </a>
+            <a class="mdc-list-item mdc-ripple" onclick="scrollToCont('account');">
+                <span class="mdc-list-item__text">계정</span>
+            </a>
+            <a class="mdc-list-item mdc-ripple" onclick="scrollToCont('contents');">
+                <span class="mdc-list-item__text">콘텐츠</span>
+            </a>
+            <a class="mdc-list-item mdc-ripple" onclick="scrollToCont('userdata');">
+                <span class="mdc-list-item__text">개인정보 보호</span>
+            </a>
+            <a class="mdc-list-item mdc-ripple" onclick="scrollToCont('otherright');">
+                <span class="mdc-list-item__text">타인 존중</span>
+            </a>
+            <a class="mdc-list-item mdc-ripple" onclick="scrollToCont('caution');">
+                <span class="mdc-list-item__text">금지 사항</span>
+            </a>
+            <a class="mdc-list-item mdc-ripple" onclick="scrollToCont('stop');">
+                <span class="mdc-list-item__text">서비스의 제한</span>
+            </a>
+            <a class="mdc-list-item mdc-ripple" onclick="scrollToCont('response');">
+                <span class="mdc-list-item__text">NULL의 책임</span>
+            </a>
+            <a class="mdc-list-item mdc-ripple" onclick="scrollToCont('change');">
+                <span class="mdc-list-item__text">서비스의 변경</span>
+            </a>
+            <a class="mdc-list-item mdc-ripple" onclick="scrollToCont('hear');">
+                <span class="mdc-list-item__text">사용자 의견</span>
+            </a>
+            <a class="mdc-list-item mdc-ripple" onclick="scrollToCont('alert');">
+                <span class="mdc-list-item__text">약관의 변경</span>
+            </a>
+        </nav>
+    </div>
+</aside>
+<div class="mdc-drawer-scrim" id="modalBack"></div>
+<div class="mdc-drawer-app-content mdc-top-app-bar--fixed-adjust" id="mdc-content">
+    <main class="main-content" id="main-content">
+        <div class="section" id="body">
+            <h1>프린트 리스트</h1>
+        </div>
+        <footer>
+            <div class="mdc-layout-grid">
+                <div class="mdc-layout-grid__inner">
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-5-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-12-phone">
+                        <h1>IASA Portal</h1>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-7-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-12-phone">
+                        <div class="mdc-layout-grid">
+                            <div class="mdc-layout-grid__inner">
+                                <div class=" mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-12-phone">
+                                    <a href="/terms">이용약관</a></div>
+                                <div class=" mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-12-phone">
+                                    <a href="/userdata">개인정보처리방침</a></div>
+                                <div class=" mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-12-phone">
+                                    <a href="/opensource">오픈소스 사용고지</a></div>
+                                <div class=" mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-12-phone">
+                                    <a href="//docs.iasa.kr">OpenAPI</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-desktop mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone">
+                        <h3>Copyright 2019-2020 NULL®. All right reserved.</h3>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+</div>
+</body>
+</html>
